@@ -41,16 +41,19 @@ const HomeSection2 = () => {
 
   return (
     <section className="container mx-auto py-10 md:py-12" id="ELEMENTS">
-      <h2 className="mb-3 mt-5 text-center text-2xl tracking-tight md:text-3xl flex justify-center items-center gap-5 translate-x-[20px]">
-        <span>WHY CHOOSE </span>
+      <h2 className="mb-10 mt-5 text-center text-2xl tracking-tight md:text-3xl flex justify-center items-center gap-5 translate-x-[20px]">
+        <span>WHY CHOOSE US ?</span>
+
+        {/* Vertical Line */}
+        <span className="w-px h-6 bg-gray-400"></span>
 
         <img
           src={logo}
           alt="Logo"
           className="h-6 md:h-8 inline-block filter brightness-50 transition-transform duration-1000 ease-in-out hover:scale-125 hover:rotate-12"
         />
-        <span></span>
       </h2>
+
       <div className="mb-5 mt-8 border-t border-gray-300 w-full mx-auto"></div>
 
       <div className="relative overflow-hidden ">

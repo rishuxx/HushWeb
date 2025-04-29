@@ -3,13 +3,9 @@ import E2 from "../assets/E2.png";
 import E3 from "../assets/E3.png";
 import E4 from "../assets/E4.png";
 
-
 import Product1 from "../assets/Product1.jpg";
 import Product2 from "../assets/Product2.jpg";
 import Product3 from "../assets/Product3.jpg";
-
-
-
 
 import italian from "../assets/italian.jpeg";
 import japanese from "../assets/japanese.jpeg";
@@ -20,21 +16,25 @@ import { FaXTwitter, FaFacebook, FaInstagram } from "react-icons/fa6";
 import hero1 from "../assets/hero1.jpg";
 import hero2 from "../assets/hero2.jpg";
 import hero3 from "../assets/hero3.jpg";
-import hero4 from "../assets/hero4.png";
-
- 
-
+import hero4 from "../assets/hero4.mp4";
 
 import SiestaLogo from "../assets/SiestaLogo.svg";
 import DawnLogo from "../assets/DawnLogo.svg";
 import TranceLogo from "../assets/TranceLogo.svg";
-
 
 import LavenderLogo from "../assets/LavenderLogo.svg";
 import OrchidLogo from "../assets/OrchidLogo.svg";
 import TeaLogo from "../assets/TeaLogo.svg";
 import CucumberLogo from "../assets/CucumberLogo.svg";
 
+
+
+
+import Shape1 from "../assets/Shape1.svg";
+import Shape2 from "../assets/Shape2.svg";
+import Shape3 from "../assets/Shape3.svg";
+import Shape4 from "../assets/Shape4.svg";
+import Shape5 from "../assets/Shape5.svg";
 
 
 export const LINKS = [
@@ -68,13 +68,12 @@ export const ELEMENTS = [
   },
 ];
 
-
 export const dearPartnerText = {
   title: "Dear Partner",
   description: `Elevate your guests' stay with premium, sustainable amenities that leave a lasting impression. 
   Hush & Bloom blends beauty, innovation, and luxury—gentle on skin, kind to the planet. 
   Whether traveling or indulging in self-care, our curated collection transforms everyday 
-  moments into exceptional experiences.`
+  moments into exceptional experiences.`,
 };
 
 export const SERVICES = [
@@ -115,6 +114,111 @@ export const SERVICES = [
     fragranceName: "Green Tea",
   },
 ];
+
+export const YOUR_HOTEL = [{
+  
+  title: "YOUR HOTEL • YOUR PICKS",
+  description: `Every hotel has a story, a vibe, a signature welcome—your toiletries should reflect that.
+With our full customization service, you control everything from bottle design to
+fragrance, ingredients, and branding. Whether you prefer minimalist elegance or a bold
+signature look, we bring your vision to life. Create a lasting impression—your hotel
+deserves nothing less.`,
+}];
+
+export const PACKAGES = [
+  {
+    name: "Basic",
+    title: "Dawn",
+    description:
+      "This premium package offers comprehensive advertising solutions for large-scale campaigns.",
+    liquid: [
+      "Hair Shampoo 25ml/35ml",
+      "Shower Gel 25ml/35ml",
+      "Body Lotion 25ml/35ml",
+      "Conditioner 25ml/35ml",
+    ],
+    soap: ["Soap 20g (Pouch Pack)", "Soap 25g (Pouch Pack)"],
+
+    dryAmenities: [
+      "Dental Kit- Toothbrush/Toothpaste",
+      "Shaving Kit- Razor/Shaving Gel",
+
+      "Disposal Bag/Vanity Kit/Shower Cap",
+    ],
+  },
+  {
+    name: "Standard",
+    title: "Trance",
+    description:
+      "This package includes effective market research and strategic campaign development.",
+    liquid: [
+      "Hair Shampoo 25ml/35ml",
+      "Shower Gel 25ml/35ml",
+      "Body Lotion 25ml/35ml",
+      "Conditioner 25ml/35ml",
+    ],
+    soap: ["Soap 20g (Pouch Pack)", "Soap 25g (Pouch Pack)"],
+
+    dryAmenities: [
+      "Dental Kit- Toothbrush/Toothpaste",
+      "Shaving Kit- Razor/Shaving Gel",
+
+      "Disposal Bag/Vanity Kit/Shower Cap",
+    ],
+  },
+  {
+    name: "Premium",
+    title: "Siasta",
+    description:
+      "This package offers essential advertising solutions for startups and small businesses.",
+    liquid: [
+      "Hair Shampoo 25ml/35ml",
+      "Shower Gel 25ml/35ml",
+      "Body Lotion 25ml/35ml",
+      "Conditioner 25ml/35ml",
+    ],
+    soap: ["Soap 20g (Pouch Pack)", "Soap 25g (Pouch Pack)"],
+
+    dryAmenities: [
+      "Dental Kit- Toothbrush/Toothpaste",
+      "Shaving Kit- Razor/Shaving Gel",
+
+      "Disposal Bag/Vanity Kit/Shower Cap",
+    ],
+  },
+];
+
+
+export const SHAPES_BOTTLES=[
+
+{title:"Tube",
+  imgSrc:Shape1,
+  description:"Ideal for creams, lotions, and gels, offering a sleek and convenient design for easy dispensing."
+},
+{
+  title:"Pump",
+  imgSrc:Shape2,
+  description:"Perfect for liquid products, providing controlled dispensing and a modern look.",
+},
+{
+  title:"Spray Bottle",
+  imgSrc:Shape3,
+  description:"Classic design suitable for a variety of products, offering versatility and elegance.",
+},
+{
+  title:"Bar Case",
+  imgSrc:Shape4,
+  description:"Ideal for creams and balms, providing a luxurious feel and easy access to the product.",
+},
+{
+  title:"Mini Bottle",
+  imgSrc:Shape5,
+  description:"Perfect for liquid products, offering a sleek and modern design for easy dispensing.",
+},
+
+]
+
+
 
 
 
@@ -183,6 +287,16 @@ export const SOCIAL_MEDIA_LINKS = [
 
 export const HERO_SLIDES = [
   {
+    type: "video",
+    video: hero4, // <-- Replace with your real video path
+    heading: "Details That Make Stay 'Seamless'",
+    subheading:
+      "Curated dry amenities that complete the experience of hospitality.",
+    buttonText: "Hi Hush & Bloom",
+  },
+
+  {
+    type: "image",
     image: hero1,
     heading: "A Sanctuary of Care in 'Luxury'",
     subheading:
@@ -190,6 +304,7 @@ export const HERO_SLIDES = [
     buttonText: "Hi Siesta",
   },
   {
+    type: "image",
     image: hero3,
     heading: "The Essence of Refined 'Hospitality'",
     subheading:
@@ -197,18 +312,11 @@ export const HERO_SLIDES = [
     buttonText: "Hi Trance",
   },
   {
+    type: "image",
     image: hero2,
     heading: "Details That Make Stay 'Seamless'",
     subheading:
       "Curated dry amenities that complete the experience of hospitality.",
     buttonText: "Dry Items",
-  },
-
-  {
-    image: hero4,
-    heading: "Details That Make Stay 'Seamless'",
-    subheading:
-      "Curated dry amenities that complete the experience of hospitality.",
-    buttonText: "Hi Siesta",
   },
 ];

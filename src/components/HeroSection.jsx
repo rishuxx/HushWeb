@@ -14,7 +14,7 @@ const HeroSection = () => {
         effect="fade"
         loop
         autoplay={{
-          delay: 5000,
+          delay: 12000,
           disableOnInteraction: false,
         }}
         pagination={{ clickable: true }}
@@ -23,11 +23,22 @@ const HeroSection = () => {
         {HERO_SLIDES.map((slide, index) => (
           <SwiperSlide key={index}>
             <div className="w-full h-screen relative">
-              <img
-                src={slide.image}
-                alt={`Slide ${index}`}
-                className="w-full h-full object-cover absolute top-0 left-0 z-0"
-              />
+              {slide.type === "video" ? (
+                <video
+                  src={slide.video}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover absolute top-0 left-0 z-0"
+                />
+              ) : (
+                <img
+                  src={slide.image}
+                  alt={`Slide ${index}`}
+                  className="w-full h-full object-cover absolute top-0 left-0 z-0"
+                />
+              )}
               <div className="absolute inset-0 flex items-center justify-start px-6 md:px-16 z-10 bg-black/5">
                 <div className="text-white max-w-xl">
                   <h1 className="text-4xl md:text-5xl font-bold leading-tight drop-shadow-lg">
