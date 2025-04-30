@@ -49,6 +49,28 @@ import Frag7 from "../assets/Frag7.svg";
 
 
 
+import item1 from "../assets/Razor.svg";
+import item2 from "../assets/packet.svg";
+
+import item3 from "../assets/Brush.svg";
+import item4 from "../assets/Razor2.svg";
+import item5 from "../assets/Razor3.svg";
+import item6 from "../assets/Brush2.svg";
+import item7 from "../assets/ToothPaste.svg";
+
+
+
+import Dry1 from "../assets/Dry1.jpg";
+import Dry2 from "../assets/Dry2.jpg";
+import Dry3 from "../assets/Dry3.jpg";
+import Dry4 from "../assets/Dry4.jpg";
+import Dry5 from "../assets/Dry5.jpg";
+import Dry6 from "../assets/Dry6.jpg";
+import Dry7 from "../assets/Dry7.jpg";
+import Dry8 from "../assets/Dry8.jpg";
+
+
+
 
 export const LINKS = [
   { text: "Home", path: "/" },
@@ -238,30 +260,34 @@ export const FRAGRANCE = [
   {
     title: "Lavender Sarenity",
     imgSrc: Frag1,
-    description:
-      "Ideal for creams, lotions, and gels, offering a sleek and convenient design for easy dispensing.",
+    imgSrc1: hero1,
+    description: "Ideal for creams, lotions, and gels, offering a sleek and convenient design for easy dispensing.",
   },
   {
     title: "Orchid Elegance",
     imgSrc: Frag2,
+    imgSrc1: hero2,
     description:
       "Perfect for liquid products, providing controlled dispensing and a modern look.",
   },
   {
     title: "Lotus Blossom",
     imgSrc: Frag3,
+    imgSrc1: hero3,
     description:
       "Classic design suitable for a variety of products, offering versatility and elegance.",
   },
   {
     title: "Eucalyptus Bliss",
     imgSrc: Frag4,
+    imgSrc1: hero1,
     description:
       "Ideal for creams and balms, providing a luxurious feel and easy access to the product.",
   },
   {
     title: "Persian Lemon ",
     imgSrc: Frag5,
+    imgSrc1: hero2,
     description:
       "Perfect for liquid products, offering a sleek and modern design for easy dispensing.",
   },
@@ -269,12 +295,72 @@ export const FRAGRANCE = [
   {
     title: "Cucumber Delight ",
     imgSrc: Frag6,
+    imgSrc1: hero2,
     description:
       "Perfect for liquid products, offering a sleek and modern design for easy dispensing.",
   },
 ];
 
+export const DRY_ITEMS = [
+  {
+    title: "Razor (Bamboo)",
+    imgSrc: item1,
+    imgSrc1:Dry1,
+    description:
+      "Ideal for creams, lotions, and gels, offering a sleek and convenient design for easy dispensing.",
+  },
+  {
+    title: "Razor (Wheatstraw)",
+    imgSrc: item4,
+    imgSrc1:Dry2,
+    description:
+      "Perfect for liquid products, providing controlled dispensing and a modern look.",
+  },
+  {
+    title: "Razor (Dorco)",
+    imgSrc: item5,
+    imgSrc1:Dry3,
+    description:
+      "Classic design suitable for a variety of products, offering versatility and elegance.",
+  },
+  {
+    title: "Gel (Gilette)",
+    imgSrc: item2,
+    imgSrc1:Dry4,
+    description:
+      "Ideal for creams and balms, providing a luxurious feel and easy access to the product.",
+  },
+  {
+    title: "Gel (Etic)",
+    imgSrc: item2,
+    imgSrc1:Dry5,
+    description:
+      "Perfect for liquid products, offering a sleek and modern design for easy dispensing.",
+  },
 
+  {
+    title: "Toothbrush (Wheat Brush)",
+    imgSrc: item3,
+    imgSrc1:Dry6,
+    description:
+      "Perfect for liquid products, offering a sleek and modern design for easy dispensing.",
+  },
+  {
+    title: "Toothbrush (White Brush)",
+    imgSrc: item6,
+    imgSrc1:Dry7,
+    description:
+      "Perfect for liquid products, offering a sleek and modern design for easy dispensing.",
+  },
+  {
+    title: "Dental Kit: Colgate",
+    imgSrc: item7,
+    imgSrc1:Dry8,
+    description:
+      "Perfect for liquid products, offering a sleek and modern design for easy dispensing.",
+  },
+ 
+];
 
 
 

@@ -7,6 +7,7 @@ import YourHotel from "../components/YourHotel";
 import AvailableIn from "../components/AvailableIn";
 
 import BottleShapes from "../components/BottleShapes";
+import DryItems from "../components/DryItems";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <AvailableIn />
       <YourHotel />
       <BottleShapes />
+      
      
     </main>
   );
