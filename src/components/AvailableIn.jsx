@@ -8,7 +8,7 @@ const AvailableIn = () => {
     <section className="py-8 px-4 md:px-8" id="pricing">
       <div className="text-center mb-12">
         <h1 className="text-3xl sm:text-4xl lg:text-4xl font-thin tracking-tighter text-center mb-10 sm:mb-20 lg:mb-14 text-[#402D0A]">
-          PACKAGING FORMS
+          Products Available In
         </h1>
       </div>
 

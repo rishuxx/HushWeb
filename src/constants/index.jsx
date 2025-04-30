@@ -37,6 +37,19 @@ import Shape4 from "../assets/Shape4.svg";
 import Shape5 from "../assets/Shape5.svg";
 
 
+
+
+import Frag1 from "../assets/Frag1.svg";
+import Frag2 from "../assets/Frag2.svg";
+import Frag3 from "../assets/Frag3.svg";
+import Frag4 from "../assets/Frag4.svg";
+import Frag5 from "../assets/Frag5.svg";
+import Frag6 from "../assets/Frag6.svg";
+import Frag7 from "../assets/Frag7.svg";
+
+
+
+
 export const LINKS = [
   { text: "Home", path: "/" },
   { text: "About Us", path: "/about" },
@@ -217,6 +230,51 @@ export const SHAPES_BOTTLES=[
 },
 
 ]
+
+
+
+
+export const FRAGRANCE = [
+  {
+    title: "Lavender Sarenity",
+    imgSrc: Frag1,
+    description:
+      "Ideal for creams, lotions, and gels, offering a sleek and convenient design for easy dispensing.",
+  },
+  {
+    title: "Orchid Elegance",
+    imgSrc: Frag2,
+    description:
+      "Perfect for liquid products, providing controlled dispensing and a modern look.",
+  },
+  {
+    title: "Lotus Blossom",
+    imgSrc: Frag3,
+    description:
+      "Classic design suitable for a variety of products, offering versatility and elegance.",
+  },
+  {
+    title: "Eucalyptus Bliss",
+    imgSrc: Frag4,
+    description:
+      "Ideal for creams and balms, providing a luxurious feel and easy access to the product.",
+  },
+  {
+    title: "Persian Lemon ",
+    imgSrc: Frag5,
+    description:
+      "Perfect for liquid products, offering a sleek and modern design for easy dispensing.",
+  },
+
+  {
+    title: "Cucumber Delight ",
+    imgSrc: Frag6,
+    description:
+      "Perfect for liquid products, offering a sleek and modern design for easy dispensing.",
+  },
+];
+
+
 
 
 

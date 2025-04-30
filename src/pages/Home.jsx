@@ -18,7 +18,7 @@ const Home = () => {
       <AvailableIn />
       <YourHotel />
       <BottleShapes />
-      <AvailableIn />
+     
     </main>
   );
 };
