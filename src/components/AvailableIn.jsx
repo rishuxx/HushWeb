@@ -21,13 +21,13 @@ const AvailableIn = () => {
             <div className="flex flex-col md:flex-row gap-6 md:gap-8">
               {/* Left: Title & Description */}
               <div className="md:w-2/6">
-                <h2 className="text-lg font-medium text-[#402D0A]/80 mb-1">
+                <h2 className="text-base font-light text-[#402D0A]/80 mb-1">
                   {pkg.name}
                 </h2>
-                <p className="text-4xl font-light text-[#402D0A] mb-4">
+                <p className="text-2xl font-light text-[#402D0A] mb-4">
                   {pkg.title}
                 </p>
-                <p className="text-[#402D0A]/70 leading-relaxed">
+                <p className="text-[#402D0A]/70 tracking-normal font-thin text-base">
                   {pkg.description || "Premium collection of luxury amenities"}
                 </p>
               </div>
@@ -37,8 +37,8 @@ const AvailableIn = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                   {/* Liquids */}
                   <div>
-                    <h3 className="font-medium text-[#402D0A] mb-2">Liquids</h3>
-                    <ul className="space-y-1 text-[#402D0A]/80">
+                    <h3 className="font-light text-[#402D0A] mb-2">Liquids</h3>
+                    <ul className="space-y-1 font-extralight text-[#402D0A]/80">
                       {pkg.liquid.map((item, i) => (
                         <li key={i} className="flex items-start">
                           <span className="mr-2">•</span>
@@ -50,8 +50,8 @@ const AvailableIn = () => {
 
                   {/* Soap */}
                   <div>
-                    <h3 className="font-medium text-[#402D0A] mb-2">Soap</h3>
-                    <ul className="space-y-1 text-[#402D0A]/80">
+                    <h3 className="font-light text-[#402D0A] mb-2">Soap</h3>
+                    <ul className="space-y-1 font-extralight text-[#402D0A]/80">
                       {pkg.soap.map((item, i) => (
                         <li key={i} className="flex items-start">
                           <span className="mr-2">•</span>
@@ -63,10 +63,10 @@ const AvailableIn = () => {
 
                   {/* Dry Amenities */}
                   <div>
-                    <h3 className="font-medium text-[#402D0A] mb-2">
+                    <h3 className="font-light text-[#402D0A] mb-2">
                       Dry Amenities
                     </h3>
-                    <ul className="space-y-1 text-[#402D0A]/80">
+                    <ul className="space-y-1 font-extralight text-[#402D0A]/80">
                       {pkg.dryAmenities?.map((item, i) => (
                         <li key={i} className="flex items-start">
                           <span className="mr-2">•</span>

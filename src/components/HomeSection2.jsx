@@ -41,8 +41,8 @@ const HomeSection2 = () => {
 
   return (
     <section className="container mx-auto py-10 md:py-12" id="ELEMENTS">
-      <h2 className="mb-10 mt-5 text-center text-2xl tracking-tight md:text-3xl flex justify-center items-center gap-5 translate-x-[20px]">
-        <span>WHY CHOOSE US ?</span>
+      <h2 className=" mt-5 md:text-3xl flex justify-center items-center gap-5 translate-x-[20px] text-3xl sm:text-4xl lg:text-4xl font-thin tracking-tighter text-center mb-10 sm:mb-20 lg:mb-14 text-[#402D0A]">
+        <span>Why Choose Us ?</span>
 
         {/* Vertical Line */}
         <span className="w-px h-6 bg-gray-400"></span>

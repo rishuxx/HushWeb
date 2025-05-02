@@ -7,7 +7,10 @@ import YourHotel from "../components/YourHotel";
 import AvailableIn from "../components/AvailableIn";
 
 import BottleShapes from "../components/BottleShapes";
-import DryItems from "../components/DryItems";
+
+import StepCustom from "../components/stepCustom";
+import FAQs from "../components/FAQs";
+import Email from "../components/Email";
 
 const Home = () => {
   return (
@@ -19,6 +22,9 @@ const Home = () => {
       <AvailableIn />
       <YourHotel />
       <BottleShapes />
+      <FAQs/>
+      <Email />
+      
       
      
     </main>

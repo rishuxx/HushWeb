@@ -71,7 +71,8 @@ const OurCollection = () => {
 
         {/* Right Content Section */}
         <div className="lg:w-1/2 w-full flex flex-col justify-center items-center p-8 md:p-10 space-y-8">
-          <h2 className="mb-10 mt-5 text-center text-2xl tracking-tight md:text-3xl flex justify-center items-center gap-5 translate-x-[20px]">
+          <h2 className=" mt-5  md:text-3xl flex justify-center items-center gap-5 translate-x-[20px] text-3xl sm:text-4xl lg:text-4xl font-thin tracking-tighter text-center mb-10 sm:mb-20 lg:mb-14 text-[#402D0A]">
+          
             <span>Our Collection</span>
 
             {/* Vertical Line */}

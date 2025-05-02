@@ -19,10 +19,10 @@ const DearPartner = () => {
       <div className="w-full max-w-6xl">
         {" "}
         {/* Increased width to take more space */}
-        <h2 className="text-lg tracking-widest text-gray-500 uppercase mb-6">
+        <h2 className="text-lg tracking-widest text-[#402D0A] font-light uppercase mb-6">
           {dearPartnerText.title}
         </h2>
-        <p className="text-gray-500 leading-relaxed text-base md:text-xl tracking-wider font-light">
+        <p className="text-[#402D0A] leading-relaxed text-base md:text-base md:font-extralight tracking-wider font-light">
           {" "}
           {/* Added letter spacing */}
           {dearPartnerText.description}

@@ -165,7 +165,7 @@ export const PACKAGES = [
     name: "Basic",
     title: "Dawn",
     description:
-      "This premium package offers comprehensive advertising solutions for large-scale campaigns.",
+      "Embracing uniqueness is an invitation to relish life’s simple joys and greet each day with a smile.",
     liquid: [
       "Hair Shampoo 25ml/35ml",
       "Shower Gel 25ml/35ml",
@@ -185,7 +185,7 @@ export const PACKAGES = [
     name: "Standard",
     title: "Trance",
     description:
-      "This package includes effective market research and strategic campaign development.",
+      "Blended for pure relaxation—a carefully curated mix of precious herbs and essential oil extracts pampers the skin with gentle cleansing and mild hydration.",
     liquid: [
       "Hair Shampoo 25ml/35ml",
       "Shower Gel 25ml/35ml",
@@ -205,7 +205,7 @@ export const PACKAGES = [
     name: "Premium",
     title: "Siasta",
     description:
-      "This package offers essential advertising solutions for startups and small businesses.",
+      "Defined by nature, guided by science—Siesta by Hush and Bloom is our premier luxury skincare brand.",
     liquid: [
       "Hair Shampoo 25ml/35ml",
       "Shower Gel 25ml/35ml",
@@ -228,26 +228,31 @@ export const SHAPES_BOTTLES=[
 
 {title:"Tube",
   imgSrc:Shape1,
+  imgSrc1:Shape1,
   description:"Ideal for creams, lotions, and gels, offering a sleek and convenient design for easy dispensing."
 },
 {
   title:"Pump",
   imgSrc:Shape2,
+  imgSrc1:Shape2,
   description:"Perfect for liquid products, providing controlled dispensing and a modern look.",
 },
 {
   title:"Spray Bottle",
   imgSrc:Shape3,
+  imgSrc1:Shape3,
   description:"Classic design suitable for a variety of products, offering versatility and elegance.",
 },
 {
   title:"Bar Case",
   imgSrc:Shape4,
+  imgSrc1:Shape4,
   description:"Ideal for creams and balms, providing a luxurious feel and easy access to the product.",
 },
 {
   title:"Mini Bottle",
   imgSrc:Shape5,
+  imgSrc1:Shape5,
   description:"Perfect for liquid products, offering a sleek and modern design for easy dispensing.",
 },
 
@@ -464,3 +469,48 @@ export const HERO_SLIDES = [
     buttonText: "Dry Items",
   },
 ];
+
+
+
+
+
+export const FAQS = [
+  {
+    question: "What services does Hush and Bloom offer?",
+    answer:
+      "HnB offers a wide range of services including personalized toiletries kits, bulk orders, and customized packaging solutions. We specialize in creating high-quality, eco-friendly products tailored to your specific needs.",
+  },
+  {
+    question: "Are your products suitable for Vegans?",
+    answer:
+      "Our products are certified as Vegan-friendly, We at Kimirica do not use any animal by-products like honey, milk, gelatine, etc. Kimirica has been awarded 100% Vegan product manufacturer certification from PETA.",
+  },
+  {
+    question: "Once opened, how long are your products safe to use?",
+    answer:
+      " You can find this out on the product container itself, the Period After Opening (PAO) appears as a little picture of an open jar with a number displayed in the middle. The number tells you how long an opened product can be kept (for instance, 12M indicates 12 months).",
+  },
+  {
+    question: "What products are included in your basic toiletries kit?",
+    answer:
+      "Our basic toiletries kit typically includes essentials such as shampoo, conditioner, body wash, soap, toothbrush, toothpaste, and a comb. We also offer add-ons like shaving kits, shower caps, and more based on your hotel’s requirements.",
+  },
+  {
+    question: " Do you offer dry items along with toiletries?",
+    answer:
+      "Yes, we provide a range of dry items such as slippers, towels, sewing kits, and vanity kits. These can be ordered individually or bundled with the toiletries kit.",
+  },
+  {
+    question: "Can we customize the products with our hotel’s branding?",
+    answer:
+      "Yes, we require a minimum order quantity for customized items, typically starting from 100 units depending on the product. Please contact us for specific details based on your needs.",
+  },
+  {
+    question: "How long does it take to fulfill an order?",
+    answer:
+      "Standard orders are processed within 3–5 business days. For customized products, the lead time is usually 10–15 business days, depending on the design and quantity.",
+  },
+];
+
+export const FAQ_DESCRIPTION =
+  "Explore quick answers to common queries in our FAQ section. Whether it's about our services, policies, or more, find the information you need. Need further assistance? Contact our customer support for personalized help!";
