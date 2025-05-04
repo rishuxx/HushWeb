@@ -17,14 +17,14 @@ const FAQs = () => {
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Left-aligned header section */}
           <div className="lg:w-1/3 lg:sticky lg:top-20 lg:self-start">
-            <h2 className="text-4xl font-semibold tracking-tight mb-4">
+            <h2 className="text-4xl font-semibold text-2xl font-thin tracking-tight mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg">{FAQ_DESCRIPTION}</p>
+            <p className="text-lg  font-thin">{FAQ_DESCRIPTION}</p>
           </div>
 
           {/* FAQ items - takes remaining space */}
-          <div className="lg:w-2/3">
+          <div className="lg:w-2/3 text-2xl font-thin">
             {FAQS.map((faq, index) => (
               <div key={index} className="mb-4 border-b pb-4">
                 <motion.div

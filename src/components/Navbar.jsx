@@ -17,9 +17,9 @@ const Navbar = () => {
   const updateNavBg = () => {
     const scrollY = window.scrollY;
     if (scrollY < 100) {
-      setNavBgClass("bg-white/20"); // Lighter background for top of the page
+      setNavBgClass("bg-black/20"); // Lighter background for top of the page
     } else {
-      setNavBgClass("bg-black/10"); // Darker background when scrolling down
+      setNavBgClass("bg-black/20"); // Darker background when scrolling down
     }
   };
 

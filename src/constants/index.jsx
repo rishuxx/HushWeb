@@ -27,17 +27,11 @@ import OrchidLogo from "../assets/OrchidLogo.svg";
 import TeaLogo from "../assets/TeaLogo.svg";
 import CucumberLogo from "../assets/CucumberLogo.svg";
 
-
-
-
 import Shape1 from "../assets/Shape1.svg";
 import Shape2 from "../assets/Shape2.svg";
 import Shape3 from "../assets/Shape3.svg";
 import Shape4 from "../assets/Shape4.svg";
 import Shape5 from "../assets/Shape5.svg";
-
-
-
 
 import Frag1 from "../assets/Frag1.svg";
 import Frag2 from "../assets/Frag2.svg";
@@ -47,18 +41,17 @@ import Frag5 from "../assets/Frag5.svg";
 import Frag6 from "../assets/Frag6.svg";
 import Frag7 from "../assets/Frag7.svg";
 
-
-
 import item1 from "../assets/Razor.svg";
 import item2 from "../assets/packet.svg";
-
 import item3 from "../assets/Brush.svg";
 import item4 from "../assets/Razor2.svg";
 import item5 from "../assets/Razor3.svg";
 import item6 from "../assets/Brush2.svg";
 import item7 from "../assets/ToothPaste.svg";
-
-
+import item9 from "../assets/Showercap.svg";
+import item10 from "../assets/Bathrobe.svg";
+import item11 from "../assets/Loofah.svg";
+import item12 from "../assets/Slipper.svg";
 
 import Dry1 from "../assets/Dry1.jpg";
 import Dry2 from "../assets/Dry2.jpg";
@@ -68,15 +61,19 @@ import Dry5 from "../assets/Dry5.jpg";
 import Dry6 from "../assets/Dry6.jpg";
 import Dry7 from "../assets/Dry7.jpg";
 import Dry8 from "../assets/Dry8.jpg";
+import Dry9 from "../assets/Dry9.jpeg";
+import Dry10 from "../assets/Dry10.jpg";
+import Dry11 from "../assets/Dry11.jpg";
+import Dry12 from "../assets/Dry12.jpg";
 
-
-
+import user from "../assets/user.png";
 
 export const LINKS = [
   { text: "Home", path: "/" },
   { text: "About Us", path: "/about" },
-  { text: "Services", path: "/services" },
+
   { text: "Products", path: "/products" },
+  { text: "Customization", path: "/custom" },
   { text: "Contact", path: "/contact" },
 ];
 
@@ -150,15 +147,16 @@ export const SERVICES = [
   },
 ];
 
-export const YOUR_HOTEL = [{
-  
-  title: "YOUR HOTEL • YOUR PICKS",
-  description: `Every hotel has a story, a vibe, a signature welcome—your toiletries should reflect that.
+export const YOUR_HOTEL = [
+  {
+    title: "YOUR HOTEL • YOUR PICKS",
+    description: `Every hotel has a story, a vibe, a signature welcome—your toiletries should reflect that.
 With our full customization service, you control everything from bottle design to
 fragrance, ingredients, and branding. Whether you prefer minimalist elegance or a bold
 signature look, we bring your vision to life. Create a lasting impression—your hotel
 deserves nothing less.`,
-}];
+  },
+];
 
 export const PACKAGES = [
   {
@@ -223,76 +221,77 @@ export const PACKAGES = [
   },
 ];
 
-
-export const SHAPES_BOTTLES=[
-
-{title:"Tube",
-  imgSrc:Shape1,
-  imgSrc1:Shape1,
-  description:"Ideal for creams, lotions, and gels, offering a sleek and convenient design for easy dispensing."
-},
-{
-  title:"Pump",
-  imgSrc:Shape2,
-  imgSrc1:Shape2,
-  description:"Perfect for liquid products, providing controlled dispensing and a modern look.",
-},
-{
-  title:"Spray Bottle",
-  imgSrc:Shape3,
-  imgSrc1:Shape3,
-  description:"Classic design suitable for a variety of products, offering versatility and elegance.",
-},
-{
-  title:"Bar Case",
-  imgSrc:Shape4,
-  imgSrc1:Shape4,
-  description:"Ideal for creams and balms, providing a luxurious feel and easy access to the product.",
-},
-{
-  title:"Mini Bottle",
-  imgSrc:Shape5,
-  imgSrc1:Shape5,
-  description:"Perfect for liquid products, offering a sleek and modern design for easy dispensing.",
-},
-
-]
-
-
-
+export const SHAPES_BOTTLES = [
+  {
+    title: "Tube",
+    imgSrc: Shape1,
+    imgSrc1: Shape1,
+    description:
+      "Ideal for creams, lotions, and gels, offering a sleek and convenient design for easy dispensing.",
+  },
+  {
+    title: "Pump",
+    imgSrc: Shape2,
+    imgSrc1: Shape2,
+    description:
+      "Perfect for liquid products, providing controlled dispensing and a modern look.",
+  },
+  {
+    title: "Spray Bottle",
+    imgSrc: Shape3,
+    imgSrc1: Shape3,
+    description:
+      "Classic design suitable for a variety of products, offering versatility and elegance.",
+  },
+  {
+    title: "Bar Case",
+    imgSrc: Shape4,
+    imgSrc1: Shape4,
+    description:
+      "Ideal for creams and balms, providing a luxurious feel and easy access to the product.",
+  },
+  {
+    title: "Mini Bottle",
+    imgSrc: Shape5,
+    imgSrc1: Shape5,
+    description:
+      "Perfect for liquid products, offering a sleek and modern design for easy dispensing.",
+  },
+];
 
 export const FRAGRANCE = [
   {
     title: "Lavender Sarenity",
     imgSrc: Frag1,
-    imgSrc1: hero1,
-    description: "Ideal for creams, lotions, and gels, offering a sleek and convenient design for easy dispensing.",
+    // imgSrc1: hero1,
+    description:
+      "Ideal for creams, lotions, and gels, offering a sleek and convenient design for easy dispensing.",
   },
   {
     title: "Orchid Elegance",
     imgSrc: Frag2,
-    imgSrc1: hero2,
+    // imgSrc1: hero2,
     description:
       "Perfect for liquid products, providing controlled dispensing and a modern look.",
   },
   {
     title: "Lotus Blossom",
     imgSrc: Frag3,
-    imgSrc1: hero3,
+    // imgSrc1: hero3,
     description:
       "Classic design suitable for a variety of products, offering versatility and elegance.",
   },
   {
     title: "Eucalyptus Bliss",
     imgSrc: Frag4,
-    imgSrc1: hero1,
+    // imgSrc1: hero1,
     description:
       "Ideal for creams and balms, providing a luxurious feel and easy access to the product.",
   },
   {
     title: "Persian Lemon ",
     imgSrc: Frag5,
-    imgSrc1: hero2,
+    // imgSrc1: hero2,
     description:
       "Perfect for liquid products, offering a sleek and modern design for easy dispensing.",
   },
@@ -300,7 +299,7 @@ export const FRAGRANCE = [
   {
     title: "Cucumber Delight ",
     imgSrc: Frag6,
-    imgSrc1: hero2,
+    // imgSrc1: hero2,
     description:
       "Perfect for liquid products, offering a sleek and modern design for easy dispensing.",
   },
@@ -310,67 +309,82 @@ export const DRY_ITEMS = [
   {
     title: "Razor (Bamboo)",
     imgSrc: item1,
-    imgSrc1:Dry1,
+    imgSrc1: Dry1,
     description:
-      "Ideal for creams, lotions, and gels, offering a sleek and convenient design for easy dispensing.",
+      "Bamboo razors are eco-friendly and biodegradable, making them a sustainable choice for personal",
   },
   {
     title: "Razor (Wheatstraw)",
     imgSrc: item4,
-    imgSrc1:Dry2,
+    imgSrc1: Dry2,
     description:
-      "Perfect for liquid products, providing controlled dispensing and a modern look.",
+      "Biodegradable razor made from wheat straw plastic alternative",
   },
   {
     title: "Razor (Dorco)",
     imgSrc: item5,
-    imgSrc1:Dry3,
-    description:
-      "Classic design suitable for a variety of products, offering versatility and elegance.",
+    imgSrc1: Dry3,
+    description: "Professional quality razor with lubricating strip",
   },
   {
     title: "Gel (Gilette)",
     imgSrc: item2,
-    imgSrc1:Dry4,
-    description:
-      "Ideal for creams and balms, providing a luxurious feel and easy access to the product.",
+    imgSrc1: Dry4,
+    description: "Ultra-sensitive formula with aloe vera for smooth shaving",
   },
   {
     title: "Gel (Etic)",
     imgSrc: item2,
-    imgSrc1:Dry5,
-    description:
-      "Perfect for liquid products, offering a sleek and modern design for easy dispensing.",
+    imgSrc1: Dry5,
+    description: "Vegan and cruelty-free shaving gel with organic ingredients",
   },
 
   {
     title: "Toothbrush (Wheat Brush)",
     imgSrc: item3,
-    imgSrc1:Dry6,
-    description:
-      "Perfect for liquid products, offering a sleek and modern design for easy dispensing.",
+    imgSrc1: Dry6,
+    description: "Natural bamboo with charcoal-infused bristles",
   },
   {
     title: "Toothbrush (White Brush)",
     imgSrc: item6,
-    imgSrc1:Dry7,
+    imgSrc1: Dry7,
     description:
-      "Perfect for liquid products, offering a sleek and modern design for easy dispensing.",
+      "Sustainable brush with bamboo handle and wheat straw bristles",
   },
   {
     title: "Dental Kit: Colgate",
     imgSrc: item7,
-    imgSrc1:Dry8,
-    description:
-      "Perfect for liquid products, offering a sleek and modern design for easy dispensing.",
+    imgSrc1: Dry8,
+    description: "Soft bristles with tongue cleaner, in recyclable packaging",
   },
- 
+  {
+    title: "Shower Cap",
+    imgSrc: item9,
+    imgSrc1: Dry9,
+    description:
+      "Shower caps are essential for keeping hair dry and protected during showers or baths.",
+  },
+  {
+    title: "Bathrobe",
+    imgSrc: item10,
+    imgSrc1: Dry10,
+    description: "100% organic cotton with premium absorbency",
+  },
+  {
+    title: "Loofah",
+    imgSrc: item11,
+    imgSrc1: Dry11,
+    description: "Plant-based exfoliating sponge, completely biodegradable",
+  },
+  {
+    title: "Slippers",
+    imgSrc: item12,
+    imgSrc1: Dry12,
+    description:
+      "Soft and comfortable slippers for guests to wear during their stay.",
+  },
 ];
-
-
-
-
-
 
 export const ABOUT = {
   header: "We love cooking!",
@@ -470,10 +484,6 @@ export const HERO_SLIDES = [
   },
 ];
 
-
-
-
-
 export const FAQS = [
   {
     question: "What services does Hush and Bloom offer?",
@@ -514,3 +524,42 @@ export const FAQS = [
 
 export const FAQ_DESCRIPTION =
   "Explore quick answers to common queries in our FAQ section. Whether it's about our services, policies, or more, find the information you need. Need further assistance? Contact our customer support for personalized help!";
+
+export const testimonials = [
+  {
+    user: "John Doe",
+    company: "Stellar Solutions",
+    image: user,
+    text: "I am extremely satisfied with the services provided. The team was responsive, professional, and delivered results beyond my expectations.",
+  },
+  {
+    user: "Jane Smith",
+    company: "Blue Horizon Technologies",
+    image: user,
+    text: "I couldn't be happier with the outcome of our project. The team's creativity and problem-solving skills were instrumental in bringing our vision to life",
+  },
+  {
+    user: "David Johnson",
+    company: "Quantum Innovations",
+    image: user,
+    text: "Working with this company was a pleasure. Their attention to detail and commitment to excellence are commendable. I would highly recommend them to anyone looking for top-notch service.",
+  },
+  {
+    user: "Ronee Brown",
+    company: "Fusion Dynamics",
+    image: user,
+    text: "Working with the team at XYZ Company was a game-changer for our project. Their attention to detail and innovative solutions helped us achieve our goals faster than we thought possible. We are grateful for their expertise and professionalism!",
+  },
+  {
+    user: "Michael Wilson",
+    company: "Visionary Creations",
+    image: user,
+    text: "I am amazed by the level of professionalism and dedication shown by the team. They were able to exceed our expectations and deliver outstanding results.",
+  },
+  {
+    user: "Emily Davis",
+    company: "Synergy Systems",
+    image: user,
+    text: "The team went above and beyond to ensure our project was a success. Their expertise and dedication are unmatched. I look forward to working with them again in the future.",
+  },
+];

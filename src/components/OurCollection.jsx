@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion"; // Added Framer Motion import
 import { SERVICES } from "../constants";
 import logo from "../assets/logo.png";
 
@@ -35,13 +36,19 @@ const OurCollection = () => {
     }
   };
 
-  const { background, text,border } = getColors();
+  const { background, text, border } = getColors();
 
   return (
     <section className={`w-full ${background} font-poppins`} id="services">
       <div className="flex flex-col lg:flex-row w-full min-h-screen">
         {/* Left Image Section */}
-        <div className="lg:w-2/4 mt-16 lg:mt-0 w-[40vh] h-[50vh] lg:h-screen relative overflow-hidden rounded-3xl lg:rounded-none mx-auto">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="lg:w-2/4 mt-16 lg:mt-0 w-[40vh] h-[50vh] lg:h-screen relative overflow-hidden rounded-3xl lg:rounded-none mx-auto"
+        >
           <div className="flex justify-center items-center mt-10">
             <img
               src={activeTab.imgSrc}
@@ -67,26 +74,34 @@ const OurCollection = () => {
               />
             </div>
           )}
-        </div>
+        </motion.div>
 
         {/* Right Content Section */}
         <div className="lg:w-1/2 w-full flex flex-col justify-center items-center p-8 md:p-10 space-y-8">
-          <h2 className=" mt-5  md:text-3xl flex justify-center items-center gap-5 translate-x-[20px] text-3xl sm:text-4xl lg:text-4xl font-thin tracking-tighter text-center mb-10 sm:mb-20 lg:mb-14 text-[#402D0A]">
-          
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-5 md:text-3xl flex justify-center items-center gap-5 translate-x-[20px] text-3xl sm:text-4xl lg:text-4xl font-thin tracking-tighter text-center mb-10 sm:mb-20 lg:mb-14 text-[#402D0A]"
+          >
             <span>Our Collection</span>
-
-            {/* Vertical Line */}
             <span className="w-px h-6 bg-gray-400"></span>
-
             <img
               src={logo}
               alt="Logo"
               className="h-6 md:h-8 inline-block filter brightness-50 transition-transform duration-1000 ease-in-out hover:scale-125 hover:rotate-12"
             />
-          </h2>
+          </motion.h2>
 
-          {/* Tabs moved to very top */}
-          <div className="flex overflow-x-auto no-scrollbar gap-3 mb-14 md:gap-4 md:mb-20">
+          {/* Tabs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex overflow-x-auto no-scrollbar gap-3 mb-14 md:gap-4 md:mb-20"
+          >
             {SERVICES.map((tab) => (
               <button
                 key={tab.id}
@@ -100,21 +115,40 @@ const OurCollection = () => {
                 {tab.title}
               </button>
             ))}
-          </div>
+          </motion.div>
 
           {/* Top Brand Logo */}
-          <div className="lg:m-16 flex justify-center items-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="lg:m-16 flex justify-center items-center"
+          >
             <img
               src={activeTab.logoSrc}
               alt={`${activeTab.title} logo`}
-              className="h-20 mt-10  md:h-32 mb-10 md:mb-16 object-contain"
+              className="h-20 mt-10 md:h-32 mb-10 md:mb-16 object-contain"
             />
-          </div>
+          </motion.div>
+
           {/* breakerline */}
-          <div className={`mb-10 mt-7 border-t ${border} w-2/5 mx-auto`} />
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className={`mb-10 mt-7 border-t ${border} w-2/5 mx-auto`}
+          />
 
           {/* Small Text and Heading */}
-          <div className="text-center mt-5 space-y-1">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="text-center mt-5 space-y-1"
+          >
             <h4
               className={`text-[12px] md:text-[14px] mb-1 tracking-widest font-thin ${text}`}
             >
@@ -123,17 +157,35 @@ const OurCollection = () => {
             <h2 className={`text-2xl md:text-4xl font-light ${text}`}>
               {activeTab.content}
             </h2>
-          </div>
+          </motion.div>
 
           {/* Description */}
-          <p
-            className={`text-center max-w-xl ${text} text-base   lg:text-sm lg:tracking-widest leading-7 lg:leading-8 font-extralight lg:font-thin`}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            className={`text-center max-w-xl ${text} text-base lg:text-sm lg:tracking-widest leading-7 lg:leading-8 font-extralight lg:font-thin`}
           >
             {activeTab.description}
-          </p>
-          <div className={`mb-10 mt-7 border-t ${border} w-2/5 mx-auto`} />
+          </motion.p>
+
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className={`mb-10 mt-7 border-t ${border} w-2/5 mx-auto`}
+          />
+
           {/* Fragrance Icon and Name */}
-          <div className="flex flex-col items-center mt-10 md:mt-14 space-y-2">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.9 }}
+            className="flex flex-col items-center mt-10 md:mt-14 space-y-2"
+          >
             <img
               src={activeTab.fragranceIcon}
               alt={`${activeTab.fragranceName} icon`}
@@ -142,7 +194,7 @@ const OurCollection = () => {
             <p className={`text-[10px] tracking-widest ${text} uppercase`}>
               {activeTab.fragranceName}
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import { HERO_SLIDES } from "../constants"; // make sure this path is correct
+import {motion} from "framer-motion";
 
 const HeroSection = () => {
   return (
@@ -33,7 +34,11 @@ const HeroSection = () => {
                   className="w-full h-full object-cover absolute top-0 left-0 z-0"
                 />
               ) : (
-                <img
+                <motion.img
+                initial={{ opacity: 0 ,y: 50 }}
+                animate={{ opacity: 1 ,y: 0 }}
+                transition={{ duration: 1 }}
+
                   src={slide.image}
                   alt={`Slide ${index}`}
                   className="w-full h-full object-cover absolute top-0 left-0 z-0"
