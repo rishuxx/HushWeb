@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { SERVICES } from "../constants";
-import logo from "../assets/logo.png";
+import logo from "../assets/Logo.png";
 
 const OurCollection = () => {
   const [activeTab, setActiveTab] = useState(SERVICES[0]);

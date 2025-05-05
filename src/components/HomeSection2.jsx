@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ELEMENTS } from "../constants";
 import HomeSection2Comp from "./HomeSection2Comp";
-import logo from "../assets/logo.png";
+import logo from "../assets/Logo.png";
 
 const HomeSection2 = () => {
   // Double the elements for seamless looping

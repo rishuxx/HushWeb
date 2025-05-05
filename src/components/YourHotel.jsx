@@ -2,7 +2,7 @@ import React from "react";
 import { YOUR_HOTEL } from "../constants";
 import bgImage from "../assets/Hotel2.jpg";
 import { motion } from "framer-motion";
-import logo from "../assets/logo.png";
+import logo from "../assets/Logo.png";
 import { BiDownArrow } from "react-icons/bi";
 import { BsArrowDown } from "react-icons/bs";
 
