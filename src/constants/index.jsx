@@ -7,9 +7,6 @@ import Product1 from "../assets/Product1.jpg";
 import Product2 from "../assets/Product2.jpg";
 import Product3 from "../assets/Product3.jpg";
 
-import italian from "../assets/italian.jpeg";
-import japanese from "../assets/japanese.jpeg";
-import indian from "../assets/indian.jpeg";
 
 import { FaXTwitter, FaFacebook, FaInstagram } from "react-icons/fa6";
 

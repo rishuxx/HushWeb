@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import styled, { keyframes, css } from "styled-components";
 
@@ -54,15 +54,13 @@ const Step = styled.div`
   position: relative;
 `;
 
-const StepIndicator = styled(motion.div).attrs((props) => ({
-  active: props.active || false,
-}))`
+const StepIndicator = styled(motion.div)`
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background: ${(props) =>
-    props.active ? "linear-gradient(145deg, #8b4513, #a0522d)" : "#ede0d4"};
-  color: ${(props) => (props.active ? "#fff" : "#a38b6d")};
+    props.$active ? "linear-gradient(145deg, #8b4513, #a0522d)" : "#ede0d4"};
+  color: ${(props) => (props.$active ? "#fff" : "#a38b6d")};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,20 +68,18 @@ const StepIndicator = styled(motion.div).attrs((props) => ({
   font-size: 1rem;
   margin-bottom: 8px;
   position: relative;
-  border: 2px solid ${(props) => (props.active ? "#8b4513" : "transparent")};
+  border: 2px solid ${(props) => (props.$active ? "#8b4513" : "transparent")};
   ${(props) =>
-    props.active &&
+    props.$active &&
     css`
       animation: ${glow} 2s infinite;
     `};
 `;
 
-const StepLabel = styled.span.attrs((props) => ({
-  active: props.active || false,
-}))`
+const StepLabel = styled.span`
   font-size: 0.8rem;
   font-weight: 500;
-  color: ${(props) => (props.active ? "#5c3a21" : "#a38b6d")};
+  color: ${(props) => (props.$active ? "#5c3a21" : "#a38b6d")};
   text-transform: uppercase;
   letter-spacing: 0.5px;
   position: absolute;
@@ -91,7 +87,6 @@ const StepLabel = styled.span.attrs((props) => ({
   white-space: nowrap;
 `;
 
-// Hotel amenity customization process steps
 const steps = [
   { id: 1, label: "Your Design" },
   { id: 2, label: "Bottle Shape" },
@@ -101,40 +96,54 @@ const steps = [
   { id: 6, label: "Finish" },
 ];
 
-/**
- * SeamlessProgressBar - An animated progress indicator for the hotel amenity customization process
- * This component shows the sequential steps required to customize hotel toiletry products
- * with an elegant animated progress bar
- */
 const SeamlessProgressBar = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const controls = useAnimation();
+  const isMounted = useRef(true);
 
   useEffect(() => {
-    // Animate through all steps continuously
+    isMounted.current = true;
+    let animationFrame;
+
     const animateProgress = async () => {
-      while (true) {
-        for (let i = 1; i <= steps.length; i++) {
-          await controls.start({
-            scaleX: (i - 1) / (steps.length - 1),
-            transition: { duration: 2.2, ease: [0.16, 1, 0.3, 1] },
-          });
+      if (!isMounted.current) return;
+
+      for (let i = 1; i <= steps.length; i++) {
+        if (!isMounted.current) break;
+
+        await controls.start({
+          scaleX: (i - 1) / (steps.length - 1),
+          transition: { duration: 2.2, ease: [0.16, 1, 0.3, 1] },
+        });
+
+        if (isMounted.current) {
           setCurrentStep(i);
           await new Promise((resolve) => setTimeout(resolve, 800));
         }
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+      }
+
+      if (!isMounted.current) return;
+
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      if (isMounted.current) {
         setCurrentStep(1);
         await controls.start({
           scaleX: 0,
           transition: { duration: 0.3 },
         });
       }
+
+      if (isMounted.current) {
+        animationFrame = requestAnimationFrame(animateProgress);
+      }
     };
 
     animateProgress();
 
     return () => {
-      // Cleanup animation if component unmounts
+      isMounted.current = false;
+      cancelAnimationFrame(animationFrame);
       controls.stop();
     };
   }, [controls]);
@@ -153,7 +162,7 @@ const SeamlessProgressBar = () => {
         {steps.map((step, index) => (
           <Step key={step.id}>
             <StepIndicator
-              active={index < currentStep}
+              $active={index < currentStep}
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 500 }}
@@ -164,7 +173,7 @@ const SeamlessProgressBar = () => {
             >
               {step.id}
             </StepIndicator>
-            <StepLabel active={index < currentStep} aria-hidden="true">
+            <StepLabel $active={index < currentStep} aria-hidden="true">
               {step.label}
             </StepLabel>
           </Step>
@@ -174,7 +183,6 @@ const SeamlessProgressBar = () => {
   );
 };
 
-// Add component metadata for SEO
 SeamlessProgressBar.displayName = "HotelAmenityCustomizationProcess";
 SeamlessProgressBar.description =
   "Interactive visualization of the hotel amenity customization process, showing the six-step journey from design to finished product.";
