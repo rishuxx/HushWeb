@@ -19,12 +19,12 @@ const DryItemsContainer = styled.div`
   max-width: 1400px;
   margin: 0 auto;
   padding: 3rem 2rem;
-  color: rgba(92, 71, 56, 0.8); // Dark brown with 50% opacity
+  color: rgba(92, 71, 56, 0.8);
   font-weight: 300;
   line-height: 1.6;
 `;
 
-const HeaderSection = styled.div`
+const HeaderSection = styled.header`
   text-align: center;
   margin-bottom: 4rem;
   padding: 0 1rem;
@@ -34,7 +34,7 @@ const MainTitle = styled.h1`
   font-size: 2.8rem;
   font-weight: 300;
   letter-spacing: -0.01em;
-  color: rgba(61, 47, 38, 0.8); // Darker brown with 50% opacity
+  color: rgba(61, 47, 38, 0.8);
   margin-bottom: 1.5rem;
   position: relative;
   display: inline-block;
@@ -47,7 +47,7 @@ const MainTitle = styled.h1`
     transform: translateX(-50%);
     width: 100px;
     height: 1px;
-    background: rgba(92, 71, 56, 0.5); // Dark brown divider
+    background: rgba(92, 71, 56, 0.5);
   }
 `;
 
@@ -60,14 +60,14 @@ const Description = styled.p`
   font-weight: 300;
 `;
 
-const ContentGrid = styled.div`
+const ContentGrid = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 3rem;
   padding: 0 1rem;
 `;
 
-const CategoryCard = styled.div`
+const CategoryCard = styled.article`
   background: white;
   border-radius: 8px;
   overflow: hidden;
@@ -191,7 +191,7 @@ const ModalOverlay = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(61, 47, 38, 0.9); // Dark brown overlay
+  background: rgba(61, 47, 38, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -246,186 +246,319 @@ const DryItems = () => {
   return (
     <DryItemsContainer>
       <HeaderSection>
-        <MainTitle>Premium Dry Items Collection</MainTitle>
+        <MainTitle>Premium Sustainable Hotel Amenities in India</MainTitle>
         <Description>
-          Discover our sustainable, guest-focused accessories made with
-          eco-friendly materials. Each product is carefully selected to pamper
-          while reducing environmental impact.
+          Discover our eco-friendly hotel dry items collection featuring premium
+          shaving kits, dental care products, and bath accessories. Our
+          sustainable amenities are carefully selected for luxury hotels across
+          India, combining guest comfort with environmental responsibility.
         </Description>
       </HeaderSection>
 
       <ContentGrid>
         {/* Shaving Kit */}
-        <CategoryCard>
+        <CategoryCard itemScope itemType="https://schema.org/ProductCollection">
           <CategoryHeader>
-            <SectionTitle>Shaving Kit</SectionTitle>
+            <SectionTitle itemProp="name">Luxury Shaving Kit</SectionTitle>
           </CategoryHeader>
 
-          <SubSectionTitle>Razors</SubSectionTitle>
+          <SubSectionTitle>Premium Razors</SubSectionTitle>
           <ProductList>
-            <ProductItem>
-              <ProductImage onClick={() => openModal(bambooRazor)}>
-                <img src={bambooRazor} alt="Bamboo Razor" />
+            <ProductItem itemScope itemType="https://schema.org/Product">
+              <ProductImage
+                onClick={() => openModal(bambooRazor)}
+                itemProp="image"
+              >
+                <img
+                  src={bambooRazor}
+                  alt="Eco-friendly Bamboo Razor for hotel guests"
+                />
               </ProductImage>
               <ProductInfo>
-                <ProductName>Bamboo Razor</ProductName>
-                <ProductDescription>
+                <ProductName itemProp="name">Bamboo Razor</ProductName>
+                <ProductDescription itemProp="description">
                   Eco-friendly bamboo handle with premium stainless steel blades
+                  - perfect for sustainable hotels in Mumbai, Delhi, and
+                  Bangalore
                 </ProductDescription>
+                <meta itemProp="category" content="Hotel Amenities" />
+                <meta itemProp="material" content="Bamboo, Stainless Steel" />
               </ProductInfo>
             </ProductItem>
 
-            <ProductItem>
-              <ProductImage onClick={() => openModal(wheatStrawRazor)}>
-                <img src={wheatStrawRazor} alt="Wheat Straw Razor" />
+            <ProductItem
+              itemScope
+              itemProp="isRelatedTo"
+              itemType="https://schema.org/Product"
+            >
+              <ProductImage
+                onClick={() => openModal(wheatStrawRazor)}
+                itemProp="image"
+              >
+                <img
+                  src={wheatStrawRazor}
+                  alt="Biodegradable wheat straw razor for eco hotels"
+                />
               </ProductImage>
               <ProductInfo>
-                <ProductName>Wheat Straw Razor</ProductName>
-                <ProductDescription>
+                <ProductName itemProp="name">Wheat Straw Razor</ProductName>
+                <ProductDescription itemProp="description">
                   Biodegradable razor made from wheat straw plastic alternative
+                  - ideal for green hotels in Goa and Kerala
                 </ProductDescription>
+                <meta itemProp="category" content="Hotel Amenities" />
+                <meta
+                  itemProp="material"
+                  content="Wheat Straw, Stainless Steel"
+                />
               </ProductInfo>
             </ProductItem>
 
-            <ProductItem>
-              <ProductImage onClick={() => openModal(dorcoRazor)}>
-                <img src={dorcoRazor} alt="Dorco Razor" />
+            <ProductItem
+              itemScope
+              itemProp="isRelatedTo"
+              itemType="https://schema.org/Product"
+            >
+              <ProductImage
+                onClick={() => openModal(dorcoRazor)}
+                itemProp="image"
+              >
+                <img
+                  src={dorcoRazor}
+                  alt="Professional hotel razor with lubricating strip"
+                />
               </ProductImage>
               <ProductInfo>
-                <ProductName>Dorco Razor</ProductName>
-                <ProductDescription>
-                  Professional quality razor with lubricating strip
+                <ProductName itemProp="name">Dorco Razor</ProductName>
+                <ProductDescription itemProp="description">
+                  Professional quality razor with lubricating strip - preferred
+                  by luxury hotels in Jaipur and Udaipur
                 </ProductDescription>
+                <meta itemProp="category" content="Hotel Amenities" />
               </ProductInfo>
             </ProductItem>
           </ProductList>
 
           <SubSectionTitle>Shaving Gel</SubSectionTitle>
           <ProductList>
-            <ProductItem>
-              <ProductImage onClick={() => openModal(giletteGel)}>
-                <img src={giletteGel} alt="Gilette Gel" />
+            <ProductItem
+              itemScope
+              itemProp="isRelatedTo"
+              itemType="https://schema.org/Product"
+            >
+              <ProductImage
+                onClick={() => openModal(giletteGel)}
+                itemProp="image"
+              >
+                <img
+                  src={giletteGel}
+                  alt="Aloe vera shaving gel for sensitive skin"
+                />
               </ProductImage>
               <ProductInfo>
-                <ProductName>Gilette Gel</ProductName>
-                <ProductDescription>
-                  Ultra-sensitive formula with aloe vera for smooth shaving
+                <ProductName itemProp="name">Gilette Gel</ProductName>
+                <ProductDescription itemProp="description">
+                  Ultra-sensitive formula with aloe vera for smooth shaving -
+                  stocked by 5-star hotels across India
                 </ProductDescription>
+                <meta itemProp="category" content="Hotel Amenities" />
               </ProductInfo>
             </ProductItem>
 
-            <ProductItem>
-              <ProductImage onClick={() => openModal(eticGel)}>
-                <img src={eticGel} alt="Etic Gel" />
+            <ProductItem
+              itemScope
+              itemProp="isRelatedTo"
+              itemType="https://schema.org/Product"
+            >
+              <ProductImage onClick={() => openModal(eticGel)} itemProp="image">
+                <img
+                  src={eticGel}
+                  alt="Vegan shaving gel for eco-conscious hotels"
+                />
               </ProductImage>
               <ProductInfo>
-                <ProductName>Etic Gel</ProductName>
-                <ProductDescription>
-                  Vegan and cruelty-free shaving gel with organic ingredients
+                <ProductName itemProp="name">Etic Gel</ProductName>
+                <ProductDescription itemProp="description">
+                  Vegan and cruelty-free shaving gel with organic ingredients -
+                  popular in boutique hotels in Himachal and Uttarakhand
                 </ProductDescription>
+                <meta itemProp="category" content="Hotel Amenities" />
               </ProductInfo>
             </ProductItem>
           </ProductList>
         </CategoryCard>
 
         {/* Dental Kit */}
-        <CategoryCard>
+        <CategoryCard itemScope itemType="https://schema.org/ProductCollection">
           <CategoryHeader>
-            <SectionTitle>Dental Kit</SectionTitle>
+            <SectionTitle itemProp="name">Eco Dental Care Kit</SectionTitle>
           </CategoryHeader>
 
-          <SubSectionTitle>Toothbrushes</SubSectionTitle>
+          <SubSectionTitle>Sustainable Toothbrushes</SubSectionTitle>
           <ProductList>
-            <ProductItem>
-              <ProductImage onClick={() => openModal(wheatBrush)}>
-                <img src={wheatBrush} alt="Wheat Brush" />
+            <ProductItem itemScope itemType="https://schema.org/Product">
+              <ProductImage
+                onClick={() => openModal(wheatBrush)}
+                itemProp="image"
+              >
+                <img
+                  src={wheatBrush}
+                  alt="Eco-friendly wheat straw toothbrush"
+                />
               </ProductImage>
               <ProductInfo>
-                <ProductName>Wheat Straw Brush</ProductName>
-                <ProductDescription>
+                <ProductName itemProp="name">Wheat Straw Brush</ProductName>
+                <ProductDescription itemProp="description">
                   Sustainable brush with bamboo handle and wheat straw bristles
+                  - reducing plastic waste in Indian hotels since 2018
                 </ProductDescription>
+                <meta itemProp="category" content="Hotel Amenities" />
+                <meta itemProp="material" content="Bamboo, Wheat Straw" />
               </ProductInfo>
             </ProductItem>
 
-            <ProductItem>
-              <ProductImage onClick={() => openModal(whiteBrush)}>
-                <img src={whiteBrush} alt="White Brush" />
+            <ProductItem
+              itemScope
+              itemProp="isRelatedTo"
+              itemType="https://schema.org/Product"
+            >
+              <ProductImage
+                onClick={() => openModal(whiteBrush)}
+                itemProp="image"
+              >
+                <img
+                  src={whiteBrush}
+                  alt="Bamboo toothbrush with charcoal bristles"
+                />
               </ProductImage>
               <ProductInfo>
-                <ProductName>White Bamboo Brush</ProductName>
-                <ProductDescription>
-                  Natural bamboo with charcoal-infused bristles
+                <ProductName itemProp="name">White Bamboo Brush</ProductName>
+                <ProductDescription itemProp="description">
+                  Natural bamboo with charcoal-infused bristles - featured in
+                  wellness resorts across South India
                 </ProductDescription>
+                <meta itemProp="category" content="Hotel Amenities" />
+                <meta itemProp="material" content="Bamboo, Charcoal" />
               </ProductInfo>
             </ProductItem>
 
-            <ProductItem>
-              <ProductImage onClick={() => openModal(colgateBrush)}>
-                <img src={colgateBrush} alt="Colgate Brush" />
+            <ProductItem
+              itemScope
+              itemProp="isRelatedTo"
+              itemType="https://schema.org/Product"
+            >
+              <ProductImage
+                onClick={() => openModal(colgateBrush)}
+                itemProp="image"
+              >
+                <img
+                  src={colgateBrush}
+                  alt="Recyclable hotel toothbrush with tongue cleaner"
+                />
               </ProductImage>
               <ProductInfo>
-                <ProductName>Colgate Brush</ProductName>
-                <ProductDescription>
-                  Soft bristles with tongue cleaner, in recyclable packaging
+                <ProductName itemProp="name">Colgate Brush</ProductName>
+                <ProductDescription itemProp="description">
+                  Soft bristles with tongue cleaner, in recyclable packaging -
+                  trusted by business hotels in metropolitan cities
                 </ProductDescription>
+                <meta itemProp="category" content="Hotel Amenities" />
               </ProductInfo>
             </ProductItem>
           </ProductList>
         </CategoryCard>
 
         {/* Accessories */}
-        <CategoryCard>
+        <CategoryCard itemScope itemType="https://schema.org/ProductCollection">
           <CategoryHeader>
-            <SectionTitle>Bath Accessories</SectionTitle>
+            <SectionTitle itemProp="name">Luxury Bath Accessories</SectionTitle>
           </CategoryHeader>
 
           <ProductList>
-            <ProductItem>
-              <ProductImage onClick={() => openModal(bathCaps)}>
-                <img src={bathCaps} alt="Bath Caps" />
+            <ProductItem itemScope itemType="https://schema.org/Product">
+              <ProductImage
+                onClick={() => openModal(bathCaps)}
+                itemProp="image"
+              >
+                <img
+                  src={bathCaps}
+                  alt="Recycled material shower caps for hotels"
+                />
               </ProductImage>
               <ProductInfo>
-                <ProductName>Bath Caps</ProductName>
-                <ProductDescription>
-                  Reusable shower caps made from recycled materials
+                <ProductName itemProp="name">Bath Caps</ProductName>
+                <ProductDescription itemProp="description">
+                  Reusable shower caps made from recycled materials - supplied
+                  to spa resorts and heritage hotels
                 </ProductDescription>
+                <meta itemProp="category" content="Hotel Amenities" />
               </ProductInfo>
             </ProductItem>
 
-            <ProductItem>
-              <ProductImage onClick={() => openModal(bathrobe)}>
-                <img src={bathrobe} alt="Bathrobe" />
+            <ProductItem
+              itemScope
+              itemProp="isRelatedTo"
+              itemType="https://schema.org/Product"
+            >
+              <ProductImage
+                onClick={() => openModal(bathrobe)}
+                itemProp="image"
+              >
+                <img
+                  src={bathrobe}
+                  alt="Organic cotton bathrobe for luxury hotels"
+                />
               </ProductImage>
               <ProductInfo>
-                <ProductName>Luxury Bathrobe</ProductName>
-                <ProductDescription>
-                  100% organic cotton with premium absorbency
+                <ProductName itemProp="name">Luxury Bathrobe</ProductName>
+                <ProductDescription itemProp="description">
+                  100% organic cotton with premium absorbency - standard in
+                  premium hotels and resorts nationwide
                 </ProductDescription>
+                <meta itemProp="category" content="Hotel Amenities" />
+                <meta itemProp="material" content="Organic Cotton" />
               </ProductInfo>
             </ProductItem>
 
-            <ProductItem>
-              <ProductImage onClick={() => openModal(loofah)}>
-                <img src={loofah} alt="Loofah" />
+            <ProductItem
+              itemScope
+              itemProp="isRelatedTo"
+              itemType="https://schema.org/Product"
+            >
+              <ProductImage onClick={() => openModal(loofah)} itemProp="image">
+                <img
+                  src={loofah}
+                  alt="Natural loofah sponge for eco-friendly hotels"
+                />
               </ProductImage>
               <ProductInfo>
-                <ProductName>Natural Loofah</ProductName>
-                <ProductDescription>
-                  Plant-based exfoliating sponge, completely biodegradable
+                <ProductName itemProp="name">Natural Loofah</ProductName>
+                <ProductDescription itemProp="description">
+                  Plant-based exfoliating sponge, completely biodegradable -
+                  perfect for ayurvedic resorts and eco-lodges
                 </ProductDescription>
+                <meta itemProp="category" content="Hotel Amenities" />
               </ProductInfo>
             </ProductItem>
 
-            <ProductItem>
-              <ProductImage onClick={() => openModal(slippers)}>
-                <img src={slippers} alt="Slippers" />
+            <ProductItem
+              itemScope
+              itemProp="isRelatedTo"
+              itemType="https://schema.org/Product"
+            >
+              <ProductImage
+                onClick={() => openModal(slippers)}
+                itemProp="image"
+              >
+                <img src={slippers} alt="Recycled material hotel slippers" />
               </ProductImage>
               <ProductInfo>
-                <ProductName>Soft Slippers</ProductName>
-                <ProductDescription>
-                  Eco-friendly slippers made from recycled materials
+                <ProductName itemProp="name">Soft Slippers</ProductName>
+                <ProductDescription itemProp="description">
+                  Eco-friendly slippers made from recycled materials - provided
+                  in hotel rooms across India for guest comfort
                 </ProductDescription>
+                <meta itemProp="category" content="Hotel Amenities" />
               </ProductInfo>
             </ProductItem>
           </ProductList>
@@ -436,7 +569,10 @@ const DryItems = () => {
         <ModalOverlay onClick={closeModal}>
           <ModalContent onClick={(e) => e.stopPropagation()}>
             <CloseButton onClick={closeModal}>×</CloseButton>
-            <ModalImage src={selectedImage} alt="Enlarged product view" />
+            <ModalImage
+              src={selectedImage}
+              alt="Enlarged view of hotel amenity product"
+            />
           </ModalContent>
         </ModalOverlay>
       )}

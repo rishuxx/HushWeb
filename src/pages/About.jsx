@@ -4,6 +4,7 @@ import DearPartner from "../components/DearPartner";
 import HomeSection2 from "../components/HomeSection2";
 import heroImage from "../assets/Card_D.png";
 import Footer from "../components/Footer";
+import AboutUs from "../components/AboutUs";
 
 const About = () => {
   return (
@@ -33,7 +34,7 @@ const About = () => {
 
       {/* Rest of your content */}
       <div className="container mx-auto px-4 py-12 md:py-16">
-        <DearPartner />
+        <AboutUs/>
         <HomeSection2 />
       </div>
 

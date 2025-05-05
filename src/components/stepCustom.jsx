@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import styled, { keyframes, css } from "styled-components";
 
-// Glow animation
+// Glow animation for active step indicators
 const glow = keyframes`
   0% { box-shadow: 0 0 0 0 rgba(139, 69, 19, 0.4); }
   70% { box-shadow: 0 0 0 10px rgba(139, 69, 19, 0); }
@@ -25,6 +25,7 @@ const ProgressTrack = styled.div`
   background: #ede0d4;
   border-radius: 4px;
   overflow: hidden;
+  aria-hidden="true";
 `;
 
 const ProgressFill = styled(motion.div)`
@@ -90,6 +91,7 @@ const StepLabel = styled.span.attrs((props) => ({
   white-space: nowrap;
 `;
 
+// Hotel amenity customization process steps
 const steps = [
   { id: 1, label: "Your Design" },
   { id: 2, label: "Bottle Shape" },
@@ -99,11 +101,17 @@ const steps = [
   { id: 6, label: "Finish" },
 ];
 
+/**
+ * SeamlessProgressBar - An animated progress indicator for the hotel amenity customization process
+ * This component shows the sequential steps required to customize hotel toiletry products
+ * with an elegant animated progress bar
+ */
 const SeamlessProgressBar = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const controls = useAnimation();
 
   useEffect(() => {
+    // Animate through all steps continuously
     const animateProgress = async () => {
       while (true) {
         for (let i = 1; i <= steps.length; i++) {
@@ -126,14 +134,19 @@ const SeamlessProgressBar = () => {
     animateProgress();
 
     return () => {
-      // Cleanup if needed
+      // Cleanup animation if component unmounts
+      controls.stop();
     };
   }, [controls]);
 
   return (
-    <Container>
+    <Container role="region" aria-label="Hotel amenity customization process">
       <ProgressTrack>
-        <ProgressFill initial={{ scaleX: 0 }} animate={controls} />
+        <ProgressFill
+          initial={{ scaleX: 0 }}
+          animate={controls}
+          aria-hidden="true"
+        />
       </ProgressTrack>
 
       <StepContainer>
@@ -144,15 +157,26 @@ const SeamlessProgressBar = () => {
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 500 }}
+              role="status"
+              aria-label={`Step ${step.id}: ${step.label} ${
+                index < currentStep ? "- completed" : "- pending"
+              }`}
             >
               {step.id}
             </StepIndicator>
-            <StepLabel active={index < currentStep}>{step.label}</StepLabel>
+            <StepLabel active={index < currentStep} aria-hidden="true">
+              {step.label}
+            </StepLabel>
           </Step>
         ))}
       </StepContainer>
     </Container>
   );
 };
+
+// Add component metadata for SEO
+SeamlessProgressBar.displayName = "HotelAmenityCustomizationProcess";
+SeamlessProgressBar.description =
+  "Interactive visualization of the hotel amenity customization process, showing the six-step journey from design to finished product.";
 
 export default SeamlessProgressBar;

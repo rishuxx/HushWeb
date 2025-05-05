@@ -110,6 +110,32 @@ export const dearPartnerText = {
 
 
 
+export const OurVisionText = {
+  title: "Our Vision",
+  description: `To become the world's leading sustainable organization for sourcing hygiene products, while enhancing the living experience of our customers and partners. We are committed to staying true to the roots of the land by using organic, eco-friendly ingredients in every product. `,
+};
+
+
+export const OurMissionText = {
+  title: "Our Mission",
+  description: `To revolutionize the toiletries industry by introducing the most sustainable and organic products, transforming the customer experience for the better, all while maintaining cost-efficiency for our customers and partners. `,
+};
+
+export const CompanyStrengthText = {
+  title: "Company Strength",
+  description: `1- Pan India Presence
+2- GMP Certified
+3- Customised Offering with Variety of Design and Categories.
+4- One Stop Solution
+5- Expertise in Export
+6- 100% Owned Company
+7- Experience of 14 Years in meeting customer commitment to deliver the quality product with economical cost globally. (Parent Company). `,
+};
+
+
+
+
+
 export const CustomizationText = {
   title: "Customization",
   description: `Get your personalized products with your brand logo.
@@ -413,58 +439,8 @@ export const ABOUT = {
 export const MISSION =
   "At our restaurant, our mission is to create delicious and memorable dining experiences.";
 
-export const CUSINES = [
-  {
-    number: "01.",
-    image: italian,
-    title: "Italian",
-    description:
-      "Experience the flavors of Italy with our exquisite Italian cuisine, featuring traditional recipes and contemporary ELEMENTS.",
-  },
-  {
-    number: "02.",
-    image: japanese,
-    title: "Japanese",
-    description:
-      "Delight in the art of Japanese culinary excellence, offering a fusion of classic and modern flavors.",
-  },
-  {
-    number: "03.",
-    image: indian,
-    title: "Indian",
-    description:
-      "Indulge in the rich and diverse tastes of India, with a menu that celebrates the country's culinary heritage.",
-  },
-];
 
-export const REVIEW = {
-  name: "Xaviour Fernando",
-  profession: "Food Critic",
-  content:
-    "“As a seasoned food critic, my expectations are always high when stepping into a new dining establishment. Restaura, with its unassuming exterior and elegantly designed interior, promised a unique culinary experience from the moment I walked in. And I must say, it delivered beyond my expectations.”",
-};
 
-export const CONTACT = [
-  { key: "address", value: "Address: 123 Main Street, Paris, France, 345678" },
-  { key: "phone", value: "Phone: 123-456-7890" },
-  { key: "email", value: "Email: contact@restaurant.com" },
-];
-
-export const SOCIAL_MEDIA_LINKS = [
-  {
-    href: "https://x.com/",
-    icon: <FaFacebook fontSize={30} className="hover:opacity-80" />,
-  },
-
-  {
-    href: "https://x.com/",
-    icon: <FaInstagram fontSize={30} className="hover:opacity-80" />,
-  },
-  {
-    href: "https://x.com/",
-    icon: <FaXTwitter fontSize={30} className="hover:opacity-80" />,
-  },
-];
 
 export const HERO_SLIDES = [
   {

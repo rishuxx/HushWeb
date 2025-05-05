@@ -15,12 +15,13 @@ const App = () => {
     <Router>
       <main className="overflow-y-hidden text-neutral-200 antialiased">
         <Navbar />
-        <div >
+        <div>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+
             <Route path="/custom" element={<Custom />} />
-            <Route path="/products" element={<Products/>} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
