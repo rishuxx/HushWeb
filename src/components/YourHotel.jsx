@@ -1,6 +1,6 @@
 import React from "react";
 import { YOUR_HOTEL } from "../constants";
-import bgImage from "../assets/Hotel4.jpg";
+import bgImage from "../assets/Hotel2.jpg";
 import { motion } from "framer-motion";
 import logo from "../assets/logo.png";
 import { BiDownArrow } from "react-icons/bi";
@@ -35,7 +35,7 @@ const YourHotel = () => {
         </motion.h2>
 
         <motion.p
-          className="text-sm md:text-base  leading-relaxed font-extralight  text-white mb-8"
+          className="text-sm md:text-base  leading-relaxed font-thin tracking-wide  text-white mb-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
@@ -49,7 +49,7 @@ const YourHotel = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.8 }}
         >
-          <span className="text-white text-sm tracking-widest font-medium flex items-center justify-center gap-2">
+          <span className="text-white text-sm tracking-widest font-extralight flex items-center justify-center gap-2">
             <img
               src={logo}
               alt="Logo"
@@ -65,7 +65,7 @@ const YourHotel = () => {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="mt-8 px-8 py-3 bg-white text-black rounded-full text-sm font-medium tracking-wide hover:bg-opacity-90 transition-all mx-auto"
+          className="mt-8 px-8 py-3 bg-white text-black rounded-full text-sm font-light tracking-wide hover:bg-opacity-90 transition-all mx-auto"
         >
           Explore More
         </motion.button>

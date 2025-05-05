@@ -108,6 +108,24 @@ export const dearPartnerText = {
   moments into exceptional experiences.`,
 };
 
+
+
+export const CustomizationText = {
+  title: "Customization",
+  description: `Get your personalized products with your brand logo.
+  We offer a wide range of customization options, including product selection, fragrance choices, and packaging designs.
+  Our team of experts will work closely with you to create a unique and memorable experience for your guests.
+  Whether you prefer a minimalist aesthetic or a bold statement, we can bring your vision to life.`,
+};
+
+
+
+
+
+
+
+
+
 export const SERVICES = [
   {
     id: 1,

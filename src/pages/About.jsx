@@ -25,7 +25,7 @@ const About = () => {
           <h1 className="text-4xl font-normal md:text-6xl tracking-tighter text-white mb-4  mt-20 animate-fadeIn">
             About Us
           </h1>
-          <p className="text-xl md:text-2xl text-white  font-extralight max-w-2xl mb-8 animate-fadeIn delay-100">
+          <p className="text-base md:text-base text-white  font-extralight max-w-2xl mb-8 animate-fadeIn delay-100">
             Hotel Amenities & Hospitality Company
           </p>
         </div>

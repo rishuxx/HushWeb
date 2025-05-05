@@ -35,10 +35,9 @@ const HeroSection = () => {
                 />
               ) : (
                 <motion.img
-                initial={{ opacity: 0 ,y: 50 }}
-                animate={{ opacity: 1 ,y: 0 }}
-                transition={{ duration: 1 }}
-
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1 }}
                   src={slide.image}
                   alt={`Slide ${index}`}
                   className="w-full h-full object-cover absolute top-0 left-0 z-0"
@@ -55,7 +54,10 @@ const HeroSection = () => {
                   >
                     {slide.subheading}
                   </p>
-                  <button className="mt-6 px-6 py-2 bg-white text-gray-800 rounded-full font-medium shadow hover:bg-gray-200 transition">
+                  <button
+                    onClick={() => (window.location.href = "/products")}
+                    className="mt-6 px-6 py-2 bg-white text-gray-800 rounded-full font-medium shadow hover:bg-gray-200 transition"
+                  >
                     {slide.buttonText} <span className="ml-2">↘</span>
                   </button>
                 </div>
