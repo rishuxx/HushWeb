@@ -26,7 +26,7 @@ const Home = () => {
         />
         <meta
           name="keywords"
-          content="hotel toiletries, luxury toiletries, custom hotel products, Hush and Bloom, hospitality supplies"
+          content="hotel toiletries, luxury toiletries, custom hotel products, Hush and Bloom, hospitality supplies,hushnbloom, hush & bloom"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.hushandbloom.com/" />

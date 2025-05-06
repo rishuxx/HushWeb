@@ -62,23 +62,21 @@ const OurCollection = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="lg:w-2/4 mt-16 lg:mt-0 w-[40vh] h-[50vh] lg:h-screen relative overflow-hidden rounded-3xl lg:rounded-none mx-auto"
+          className="lg:w-2/4 mt-16 lg:mt-0 w-[40vh] h-[50vh] lg:h-[90vh] relative mx-auto"
           itemProp="image"
         >
-          <div className="flex justify-center items-center mt-10">
+          <div className="flex justify-center items-center h-full w-full lg:mt-10 rounded-3xl overflow-hidden">
             <img
               src={activeTab.imgSrc}
               alt={`${activeTab.title} - Luxury Hotel Amenities Collection`}
-              className="max-w-[700px] ml-28 w-full h-auto rounded-2xl cursor-pointer shadow-lg"
+              className="max-w-[700px] lg:ml-28 w-full h-full object-cover rounded-3xl cursor-pointer shadow-lg"
               onClick={() => setShowFullImage(true)}
               loading="lazy"
               itemProp="image"
             />
           </div>
 
-          <p className="text-center mt-2 text-white text-xs bg-black/60 inline-block px-2 py-1 rounded md:hidden">
-            Tap to view full size
-          </p>
+         
 
           {showFullImage && (
             <div
