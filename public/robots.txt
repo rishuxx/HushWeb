@@ -1,0 +1,18 @@
+# Allow all search engines full access to the site
+User-agent: *
+Allow: /
+
+# Disallow unnecessary or duplicate routes (customize as needed)
+Disallow: /404
+Disallow: /error
+Disallow: /temp
+Disallow: /private
+
+# Crawl-delay for polite crawling (optional, mostly for Bing/Yandex)
+Crawl-delay: 5
+
+# Sitemap for better indexing
+Sitemap: https://www.hushandbloom.com/sitemap.xml
+
+# Host directive for search engines (mostly used by Yandex)
+Host: www.hushandbloom.com
