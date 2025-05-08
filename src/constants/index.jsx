@@ -11,6 +11,8 @@ import Product3 from "../assets/Product3.jpg";
 import { FaXTwitter, FaFacebook, FaInstagram } from "react-icons/fa6";
 
 import hero1 from "../assets/hero1.jpg";
+import hero5 from "../assets/hero5.jpg";
+import hero6 from "../assets/hero6.jpg";
 import hero2 from "../assets/hero2.jpg";
 import hero3 from "../assets/hero3.jpg";
 import hero4 from "../assets/hero4.mp4";
@@ -441,6 +443,14 @@ export const MISSION =
 
 export const HERO_SLIDES = [
   {
+    type: "image",
+    image: hero5,
+    heading: "Where Scent Meets 'Style'",
+    subheading:
+      "Custom-scented toiletries, made for your home and your guests.",
+    buttonText: "Hi Customization",
+  },
+  {
     type: "video",
     video: hero4, // <-- Replace with your real video path
     heading: "Details That Make Stay 'Seamless'",
@@ -457,6 +467,16 @@ export const HERO_SLIDES = [
       "Where every detail is a promise of comfort and elegance with luxury.",
     buttonText: "Hi Siesta",
   },
+
+  {
+    type: "image",
+    image: hero6,
+    heading: "A Sanctuary of Care in 'Luxury'",
+    subheading:
+      "Where every detail is a promise of comfort and elegance with luxury.",
+    buttonText: "Hi Siesta",
+  },
+
   {
     type: "image",
     image: hero3,
