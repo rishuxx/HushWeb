@@ -484,7 +484,7 @@ export const FAQS = [
   {
     question: "Are your products suitable for Vegans?",
     answer:
-      "Our products are certified as Vegan-friendly, We at Kimirica do not use any animal by-products like honey, milk, gelatine, etc. Kimirica has been awarded 100% Vegan product manufacturer certification from PETA.",
+      "Our products are certified as Vegan-friendly, We at Hush and Bloom do not use any animal by-products like honey, milk, gelatine, etc. Hush and Bloom has been awarded 100% Vegan product manufacturer certification from PETA.",
   },
   {
     question: "Once opened, how long are your products safe to use?",
