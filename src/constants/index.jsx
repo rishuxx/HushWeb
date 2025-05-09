@@ -447,7 +447,7 @@ export const HERO_SLIDES = [
     image: hero5,
     heading: "Where Scent Meets 'Style'",
     subheading:
-      "Custom-scented toiletries, made for your home and your guests.",
+      "Custom-scented toiletries, made for your hotel and your guests.",
     buttonText: "Hi Customization",
   },
   {
