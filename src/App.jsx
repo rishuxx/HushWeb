@@ -1,7 +1,6 @@
 // src/App.jsx
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { SpeedInsights } from "@vercel/speed-insights/react"; // Vercel Speed Insights
 
 import Navbar from "./components/Navbar";
 
@@ -13,17 +12,12 @@ import Products from "./pages/Products";
 import Custom from "./pages/Custom";
 
 // Analytics
-import Analytics from "./pages/Analytics"; // Your custom analytics (e.g., Google Analytics)
+import Analytics from "./pages/Analytics"; // Import the Analytics component
 
 const App = () => {
   return (
     <Router>
-      {/* Your custom Analytics (e.g., Google Analytics, Umami, etc.) */}
-      <Analytics />
-
-      {/* Vercel Speed Insights (performance metrics) */}
-      <SpeedInsights />
-
+      <Analytics /> {/* Add this line to track page views */}
       <main className="overflow-y-hidden text-neutral-200 antialiased">
         <Navbar />
         <div>
