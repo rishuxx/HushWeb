@@ -1,26 +1,24 @@
 // src/App.jsx
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
+import Analytics from "./pages/Analytics"; // Page view tracking
 
-// Page components
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Products from "./pages/Products";
-import Custom from "./pages/Custom";
-
-// Analytics
-import Analytics from "./pages/Analytics"; // Import the Analytics component
+// Lazy-loaded Page components
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Products = lazy(() => import("./pages/Products"));
+const Custom = lazy(() => import("./pages/Custom"));
 
 const App = () => {
   return (
     <Router>
-      <Analytics /> {/* Add this line to track page views */}
+      <Analytics /> {/* Tracks page views */}
       <main className="overflow-y-hidden text-neutral-200 antialiased">
         <Navbar />
-        <div>
+        <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/custom" element={<Custom />} />
@@ -28,7 +26,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-        </div>
+        </Suspense>
       </main>
     </Router>
   );
