@@ -155,7 +155,7 @@ export const SERVICES = [
   {
     id: 1,
     title: "Siesta",
-    content0: "A SANTUARY OF CARE,",
+    content0: "A SANCTUARY OF CARE,",
     content: "WRAPPED IN A LUXURY.",
     description:
       "Defined by nature, guided by science—Siesta by Hush and Bloom is our premier luxury skincare brand. It's groundbreaking formulation merge cutting-edge scientific advancements with the purity of the natural world, delivering exceptional results. With fine fragrances and indulgent textures, Siesta offers a truly luxurious self-care experience",
