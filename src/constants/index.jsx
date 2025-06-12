@@ -7,7 +7,6 @@ import Product1 from "../assets/Product1.jpg";
 import Product2 from "../assets/Product2.jpg";
 import Product3 from "../assets/Product3.jpg";
 
-
 import { FaXTwitter, FaFacebook, FaInstagram } from "react-icons/fa6";
 
 import hero1 from "../assets/hero1.jpg";
@@ -80,7 +79,7 @@ export const ELEMENTS = [
   {
     image: E1,
     title: "VEGAN 100%",
-    description: "Vegan free cosmatics with natural ingredients only.",
+    description: "Vegan free cosmeticss with natural ingredients only.",
   },
   {
     image: E2,
@@ -107,13 +106,10 @@ export const dearPartnerText = {
   moments into exceptional experiences.`,
 };
 
-
-
 export const OurVisionText = {
   title: "Our Vision",
   description: `To become the world's leading sustainable organization for sourcing hygiene products, while enhancing the living experience of our customers and partners. We are committed to staying true to the roots of the land by using organic, eco-friendly ingredients in every product. `,
 };
-
 
 export const OurMissionText = {
   title: "Our Mission",
@@ -131,10 +127,6 @@ export const CompanyStrengthText = {
 7- Experience of 14 Years in meeting customer commitment to deliver the quality product with economical cost globally. (Parent Company). `,
 };
 
-
-
-
-
 export const CustomizationText = {
   title: "Customization",
   description: `Get your personalized products with your brand logo.
@@ -142,14 +134,6 @@ export const CustomizationText = {
   Our team of experts will work closely with you to create a unique and memorable experience for your guests.
   Whether you prefer a minimalist aesthetic or a bold statement, we can bring your vision to life.`,
 };
-
-
-
-
-
-
-
-
 
 export const SERVICES = [
   {
@@ -244,7 +228,7 @@ export const PACKAGES = [
   },
   {
     name: "Premium",
-    title: "Siasta",
+    title: "Siesta",
     description:
       "Defined by nature, guided by science—Siesta by Hush and Bloom is our premier luxury skincare brand.",
     liquid: [
@@ -437,9 +421,6 @@ export const ABOUT = {
 
 export const MISSION =
   "At our restaurant, our mission is to create delicious and memorable dining experiences.";
-
-
-
 
 export const HERO_SLIDES = [
   {

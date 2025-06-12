@@ -37,7 +37,8 @@ const ElegantMapComponent = () => {
           Visit Us
         </h1>
         <p className="text-lg font-light text-gray-600 max-w-3xl mx-auto">
-          UG-04, Vinayak Central, Cooper Road, Civil Lines, Prayagraj, Uttar Pradesh, India, 211001
+          UG-04, Vinayak Central, Cooper Road, Civil Lines, Prayagraj, Uttar
+          Pradesh, India, 211001
         </p>
       </div>
 
@@ -74,7 +75,7 @@ const ElegantMapComponent = () => {
             <div className="mt-3 space-y-2">
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-gray-600" />
-                <span className="text-sm">+91 XXXX XXX XXX</span>
+                <span className="text-sm">+91 7985771381</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-gray-600" />
