@@ -9,6 +9,7 @@ import Product3 from "../assets/Product3.jpg";
 
 import { FaXTwitter, FaFacebook, FaInstagram } from "react-icons/fa6";
 
+import hero00 from "../assets/hero0.jpg";
 import hero1 from "../assets/hero1.jpg";
 import hero5 from "../assets/hero5.jpg";
 import hero6 from "../assets/hero6.jpg";
@@ -423,6 +424,15 @@ export const MISSION =
   "At our restaurant, our mission is to create delicious and memorable dining experiences.";
 
 export const HERO_SLIDES = [
+  {
+    type: "image",
+    image: hero00,
+    heading: "Details That Make Stay 'Seamless'",
+    subheading:
+      "Curated dry amenities that complete the experience of hospitality.",
+    buttonText: "Dry Items",
+  },
+
   {
     type: "image",
     image: hero5,
